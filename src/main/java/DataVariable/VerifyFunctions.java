@@ -9,7 +9,7 @@ import java.util.Properties;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.config.SSLConfig;
 import com.jayway.restassured.response.Response;
-import org.slf4j.LoggerFactory;
+import org.slf4j.*;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.slf4j.Logger;
 
