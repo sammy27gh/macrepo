@@ -7,9 +7,7 @@ Feature: Login Feature
     When I enter the correct UserName and Password
     Then I should be able to see the HomePage
 
-
- Scenario: Validate the Login Functionality 
+  Scenario: Validate the Login Functionality
     Given I enter an invalid userName and Password
-    When i initiate the tool 
+    When i initiate the tool
     Then I should be able to guide the tool
-

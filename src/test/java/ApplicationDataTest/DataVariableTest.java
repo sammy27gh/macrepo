@@ -64,7 +64,8 @@ public class DataVariableTest {
 
 	@Given("^I have a prescription Application$")
 	public void i_have_a_prescription_Application() throws Throwable {
-		LOGGER.info("Validate the Login Page");
+		//LOGGER.info("Validate the Login Page");
+		System.out.println("Let the man says that i am strong ");
 	}
 
 	@When("^I enter the correct UserName and Password$")
@@ -73,19 +74,27 @@ public class DataVariableTest {
 		try {
 			//LOGGER.info("When I send a valid Get_Quote all the request fields");
 			String ScenarioName = "Validate the UserName and Password";
-			LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
+			//LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
 			Headers requestHeaders = DataVariableRequest.createRequestHeader(dataMap.get(ScenarioName));
-			Headers pathParameter = DataVariableRequest.createRequestParametersBase(dataMap.get(ScenarioName));
+			Headers  pathParameter = DataVariableRequest.createRequestParametersBase(dataMap.get(ScenarioName));
+			
+			
 			System.out.println(requestHeaders);
 			System.out.println(pathParameter);
         
 	      System.out.println(verifyfunctions.baseURI());
 			verifyfunctions.baseURI();
 			responseWhen = given().contentType(com.jayway.restassured.http.ContentType.JSON)
-             .headers(requestHeaders).when().get(verifyfunctions.baseURI()).then()
+					.queryParam("website-id", 8037253)
+					.queryParam("page-number", 2)
+				    .queryParam("keywords", "printers")
+			        .queryParam("manufacturer-name","HP")
+			 //.headers(pathParameter)
+             .headers(requestHeaders).when().get("/v2/product-search").then()
 					.statusCode(200).extract().response();
 		} catch (Exception e) {
-			LOGGER.error(e.getMessage());
+			//LOGGER.error(e.getMessage());
+			System.out.println(e.getMessage());
 			Assert.fail();
 		}
 		responseThen = responseWhen;
@@ -98,7 +107,7 @@ public class DataVariableTest {
 		try {
 			//LOGGER.info("Then I receive valid Get_Quote response along with all applicable fields");
 			if (responseThen != null) {
-				LOGGER.info("Total Response for Get_Quote is: " + responseThen.asString());
+				//LOGGER.info("Total Response for Get_Quote is: " + responseThen.asString());
 				// String ScenarioName = "Send valid Get_Quote data";
 				// Response outputs
 				//verifyfunctions.responseObject(responseThen);
@@ -114,7 +123,8 @@ public class DataVariableTest {
 				Assert.fail();
 			}
 		} catch (Exception e) {
-			LOGGER.error(e.getMessage());
+			e.getMessage();
+			//LOGGER.error(e.getMessage());
 			Assert.fail();
 		}
 
