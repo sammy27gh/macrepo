@@ -89,7 +89,8 @@ public class DataVariableTest {
 					.queryParam("page-number", 2)
 				    .queryParam("keywords", "printers")
 			        .queryParam("manufacturer-name","HP")
-			 //.headers(pathParameter)
+			        
+			   //.headers(pathParameter)
              .headers(requestHeaders).when().get("/v2/product-search").then()
 					.statusCode(200).extract().response();
 		} catch (Exception e) {

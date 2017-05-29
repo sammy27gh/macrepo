@@ -21,7 +21,7 @@
         "steps": [
           {
             "result": {
-              "duration": 470345530,
+              "duration": 574396707,
               "status": "passed"
             },
             "name": "I have a prescription Application",
@@ -33,7 +33,7 @@
           },
           {
             "result": {
-              "duration": 7298889949,
+              "duration": 7499328279,
               "status": "passed"
             },
             "name": "I enter the correct UserName and Password",
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 10431547,
+              "duration": 9589194,
               "status": "passed"
             },
             "name": "I should be able to see the HomePage",
@@ -67,7 +67,7 @@
         "steps": [
           {
             "result": {
-              "duration": 162386,
+              "duration": 849685,
               "status": "passed"
             },
             "name": "I enter an invalid userName and Password",
@@ -79,7 +79,7 @@
           },
           {
             "result": {
-              "duration": 103370,
+              "duration": 123164,
               "status": "passed"
             },
             "name": "i initiate the tool",
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 97871,
+              "duration": 82109,
               "status": "passed"
             },
             "name": "I should be able to guide the tool",

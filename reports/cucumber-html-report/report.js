@@ -39,21 +39,21 @@ formatter.match({
   "location": "DataVariableTest.i_have_a_prescription_Application()"
 });
 formatter.result({
-  "duration": 470345530,
+  "duration": 574396707,
   "status": "passed"
 });
 formatter.match({
   "location": "DataVariableTest.i_enter_the_correct_UserName_and_Password()"
 });
 formatter.result({
-  "duration": 7298889949,
+  "duration": 7499328279,
   "status": "passed"
 });
 formatter.match({
   "location": "DataVariableTest.i_should_be_able_to_see_the_HomePage()"
 });
 formatter.result({
-  "duration": 10431547,
+  "duration": 9589194,
   "status": "passed"
 });
 formatter.scenario({
@@ -83,21 +83,21 @@ formatter.match({
   "location": "DataVariableTest.i_enter_an_invalid_userName_and_Password()"
 });
 formatter.result({
-  "duration": 162386,
+  "duration": 849685,
   "status": "passed"
 });
 formatter.match({
   "location": "DataVariableTest.i_initiate_the_tool()"
 });
 formatter.result({
-  "duration": 103370,
+  "duration": 123164,
   "status": "passed"
 });
 formatter.match({
   "location": "DataVariableTest.i_should_be_able_to_guide_the_tool()"
 });
 formatter.result({
-  "duration": 97871,
+  "duration": 82109,
   "status": "passed"
 });
 });

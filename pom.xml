@@ -13,10 +13,13 @@
     <version>3.0.1</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.7.10</version>
+</dependency>
 
-
-  <!-- https://mvnrepository.com/artifact/junit/junit -->
-<!-- https://mvnrepository.com/artifact/org.slf4j/log4j-over-slf4j -->
 
 
   <!--  cucumber  -->
