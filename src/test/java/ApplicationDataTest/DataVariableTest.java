@@ -64,17 +64,16 @@ public class DataVariableTest {
 
 	@Given("^I have a prescription Application$")
 	public void i_have_a_prescription_Application() throws Throwable {
-		//LOGGER.info("Validate the Login Page");
-		System.out.println("Let the man says that i am strong ");
+		LOGGER.info("given that i have a  Login Page");
 	}
 
 	@When("^I enter the correct UserName and Password$")
 	public void i_enter_the_correct_UserName_and_Password() throws Throwable {
 
 		try {
-			//LOGGER.info("When I send a valid Get_Quote all the request fields");
+			LOGGER.info("When I send a valid Get_Quote all the request fields");
 			String ScenarioName = "Validate the UserName and Password";
-			//LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
+			LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
 			Headers requestHeaders = DataVariableRequest.createRequestHeader(dataMap.get(ScenarioName));
 			Headers  pathParameter = DataVariableRequest.createRequestParametersBase(dataMap.get(ScenarioName));
 			
