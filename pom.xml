@@ -65,6 +65,12 @@
 			<version>3.8</version>
 		</dependency>
 
+<!-- https://mvnrepository.com/artifact/org.hspconsortium.carewebframework/cwf-ui-reporting -->
+<dependency>
+    <groupId>org.hspconsortium.carewebframework</groupId>
+    <artifactId>cwf-ui-reporting</artifactId>
+    <version>3.0.0-RC4</version>
+</dependency>
 
 	</dependencies>
 	<!-- <distributionManagement> <repository> <id>WIN-ZJV42YZCY1P</id> <name>WIN-ZJV42YZCY1P-releases</name> 
@@ -90,5 +96,5 @@
 			</plugin>
 </plugins>
 </build>
-	
+
 </project>
