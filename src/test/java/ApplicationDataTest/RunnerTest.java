@@ -1,6 +1,8 @@
 package ApplicationDataTest;
 
 import org.junit.runner.RunWith;
+
+/*import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 //import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -20,4 +22,9 @@ plugin = {"pretty:reports/cucumber-pretty-report/cucumber-pretty.txt",
 		)
 public class RunnerTest {
 		
-}
+}*/
+
+
+
+
+
