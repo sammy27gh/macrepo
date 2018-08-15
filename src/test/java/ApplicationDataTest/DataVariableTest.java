@@ -45,7 +45,7 @@ public class DataVariableTest {
 		columnMapping.put("page_number", "page_number");
 		columnMapping.put("keywords", "keywords");
 		columnMapping.put("manufacturer_name", "manufacturer_name");
-		//columnMapping.put("Authorization", "Authorization");
+		columnMapping.put("Authorization", "Authorization");
 		
 
 		String resources = "src/test/resources/environment/";
