@@ -2,6 +2,8 @@ package ApplicationDataTest;
 
 import org.junit.runner.RunWith;
 
+//import org.junit.runner.RunWith;
+
 /*import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -24,12 +26,13 @@ public class RunnerTest {
 		
 }*/
 
-import org.junit.runner.RunWith;
+//import org.junit.runner.RunWith;
 
 import com.github.mkolisnyk.cucumber.runner.ExtendedCucumber;
 import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
 
 import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(ExtendedCucumber.class)
 @ExtendedCucumberOptions(jsonReport = "target/cucumber.json",
@@ -47,7 +50,7 @@ import cucumber.api.CucumberOptions;
         features = { "src/test/resources/features" },
         glue = { "ApplicationDataTest" },
         tags = {})
-public class RunnerTest {
+public class RunnerTest extends AbstractTestNGCucumberTests {
 }
 
 
