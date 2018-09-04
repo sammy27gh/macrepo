@@ -11,7 +11,7 @@ import java.util.Map;
 //import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Headers;
@@ -25,6 +25,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import fileReader.FileProcessor;
+import junit.framework.Assert;
 
 public class DataVariableTest {
 	private static final Logger LOGGER = LoggerFactory.getLogger(DataVariableTest.class);
@@ -76,8 +77,10 @@ public class DataVariableTest {
 			String ScenarioName = "Validate the UserName and Password";
 			LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
 			Headers requestHeaders = DataVariableRequest.createRequestHeader(dataMap.get(ScenarioName));
-			// Headers pathParameter =
-			// DataVariableRequest.createRequestParametersBase(dataMap.get(ScenarioName));
+			Map<String, String> UsingqueryParam = DataVariableRequest.CreateQueryParameter(dataMap.get(ScenarioName));
+            
+			System.out.println("\n i want to be able to see the map");
+			System.out.println(UsingqueryParam);
 
 			System.out.println(requestHeaders);
 			// System.out.println(pathParameter);
@@ -85,9 +88,13 @@ public class DataVariableTest {
 			System.out.println(verifyfunctions.baseURI());
 			verifyfunctions.baseURI();
 			responseWhen = given().contentType(com.jayway.restassured.http.ContentType.JSON)
-					.queryParam("website-id", 8037253).queryParam("page-number", 2)
-					.queryParam("keywords", "barnes and noble").queryParam("manufacturer-name", "Noble")
-
+					.queryParams(UsingqueryParam)
+					//.queryParams(UsingqueryParam)
+				// .queryParameters(UsingqueryParam)
+					 // .queryParam("website-id", 8037253) .queryParam("page-number", 2)
+					 // .queryParam("keywords", "barnes and noble") .queryParam("manufacturer-name",
+					//  "Noble")
+					 
 					// .headers(pathParameter)
 					.headers(requestHeaders).when().get("/v2/product-search").then().statusCode(200).extract()
 					.response();
@@ -97,7 +104,7 @@ public class DataVariableTest {
 			Assert.fail();
 		}
 		responseThen = responseWhen;
-		System.out.println(responseThen.asString().toString()+ "\n");
+		System.out.println(responseThen.asString().toString() + "\n");
 	}
 
 	@Then("^I should be able to see the HomePage$")
@@ -109,10 +116,10 @@ public class DataVariableTest {
 			// applicable fields");
 			if (responseThen != null) {
 				LOGGER.info("Total Response for Get_Quote is: \n" + responseThen.asString());
-				//LOGGER.info(" ", responseThen.asString().equals(11793338));
+				// LOGGER.info(" ", responseThen.asString().equals(11793338));
 				Assert.assertTrue(responseThen.asString().contains("Newegg.com"));
-                 // Assert.assertTrue(responseThen.asString(), "");
-			//	System.out.println(responseThen.asString());
+				// Assert.assertTrue(responseThen.asString(), "");
+				// System.out.println(responseThen.asString());
 				Assert.assertTrue(responseThen.asString().contains(""));
 
 			} else {
