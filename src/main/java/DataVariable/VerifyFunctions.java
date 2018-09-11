@@ -58,7 +58,7 @@ public class VerifyFunctions {
            String password = "ktCert";
            keyStore = KeyStore.getInstance("PKCS12");
         keyStore.load(
-               new FileInputStream("src/test/resources/environment/CERTIFICATION/2000000500-tst.p12"), password.toCharArray());
+               new FileInputStream("src/test/resources/environment/CERTIFICATION/1-tst.p12"), password.toCharArray());
         SSLSocketFactory clientAuthFactory = new SSLSocketFactory(keyStore, password);
         config = new SSLConfig().with().sslSocketFactory(clientAuthFactory);
         RestAssured.config = RestAssured.config().sslConfig(config);

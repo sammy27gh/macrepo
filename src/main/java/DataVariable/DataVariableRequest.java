@@ -6,7 +6,7 @@ import java.util.Map;
 import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Headers;
 
-public class DataVariableRequest<queryParameters> {
+public class DataVariableRequest {
 
 	public static String createRequestBody(DataVariable datavariable) {
 
@@ -40,20 +40,7 @@ public class DataVariableRequest<queryParameters> {
 
 	}
 
-/*	public static Headers createRequestParametersBase(DataVariable datavariable) {
 
-		// Header reqIdHdr = new Header("website-id",
-		// java.util.UUID.randomUUID().toString());
-		Header reqIdHdr = new Header("website-id", datavariable.getWebsiteID());
-		Header gtwCmpnyIdHdr = new Header("page-number", datavariable.getPage_number());
-		Header gtwUsrIdHdr = new Header("keywords", datavariable.getKeywords());
-		Header sessionIdHdr = new Header("manufacturer-name", datavariable.getManufacturer_name());
-		// Header authorizationKeyHdr = new Header("Authorization", "Bearer "+
-		// datavariable);
-		Headers headers = new Headers(reqIdHdr, gtwCmpnyIdHdr, gtwUsrIdHdr, sessionIdHdr);
-		return headers;
-
-	}*/
 
 	public static Map<String, String> CreateQueryParameter(DataVariable datavariable) {
 		Map<String, String> CreateQueryParamter = new HashMap<String, String>();

@@ -11,7 +11,7 @@ import java.util.Map;
 //import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-//import org.testng.Assert;
+import org.testng.Assert;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Headers;
@@ -25,7 +25,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import fileReader.FileProcessor;
-import junit.framework.Assert;
+//import junit.framework.Assert;
 
 public class DataVariableTest {
 	private static final Logger LOGGER = LoggerFactory.getLogger(DataVariableTest.class);
@@ -78,7 +78,7 @@ public class DataVariableTest {
 			LOGGER.debug("Input test data is: " + dataMap.get(ScenarioName));
 			Headers requestHeaders = DataVariableRequest.createRequestHeader(dataMap.get(ScenarioName));
 			Map<String, String> UsingqueryParam = DataVariableRequest.CreateQueryParameter(dataMap.get(ScenarioName));
-            
+
 			System.out.println("\n i want to be able to see the map");
 			System.out.println(UsingqueryParam);
 
@@ -88,16 +88,8 @@ public class DataVariableTest {
 			System.out.println(verifyfunctions.baseURI());
 			verifyfunctions.baseURI();
 			responseWhen = given().contentType(com.jayway.restassured.http.ContentType.JSON)
-					.queryParams(UsingqueryParam)
-					//.queryParams(UsingqueryParam)
-				// .queryParameters(UsingqueryParam)
-					 // .queryParam("website-id", 8037253) .queryParam("page-number", 2)
-					 // .queryParam("keywords", "barnes and noble") .queryParam("manufacturer-name",
-					//  "Noble")
-					 
-					// .headers(pathParameter)
-					.headers(requestHeaders).when().get("/v2/product-search").then().statusCode(200).extract()
-					.response();
+					.queryParams(UsingqueryParam).headers(requestHeaders).when().get("/v2/product-search").then()
+					.statusCode(200).extract().response();
 		} catch (Exception e) {
 			// LOGGER.error(e.getMessage());
 			System.out.println(e.getMessage());
